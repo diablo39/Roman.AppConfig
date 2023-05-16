@@ -1,0 +1,24 @@
+openapi: '3.0.2'
+info:
+  title: AppConfig API
+  version: 1.0-pre-1
+  license: 
+    name: GNU GENERAL PUBLIC LICENSE Version 3
+    url: https://www.gnu.org/licenses/gpl-3.0.en.html
+servers:
+  - url: https://api.server.test/v1
+paths:
+  /applications:
+    get:
+      operationId: getApplications
+      summary: Get list of the applications stored in the system
+      responses:
+        '200':
+          description: OK
+  /applications/{id}:
+    get: 
+      responses: 
+        '200': 
+          description: OK
+          
+      

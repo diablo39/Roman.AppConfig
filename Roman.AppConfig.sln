@@ -23,7 +23,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Roman.AppConfig.Infrastruct
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{35695224-4C9B-472A-BC9F-AE35428C2E53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Roman.AppConfig.Tests", "src\api\tests\Roman.AppConfig.Tests\Roman.AppConfig.Tests.csproj", "{DEF5305B-4E52-4018-8FA6-C107816E602F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Roman.AppConfig.Tests", "src\api\tests\Roman.AppConfig.Tests\Roman.AppConfig.Tests.csproj", "{DEF5305B-4E52-4018-8FA6-C107816E602F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "api-spec", "api-spec", "{32302B1D-1C24-413D-B6AB-8D031C522C52}"
+	ProjectSection(SolutionItems) = preProject
+		src\api\api-spec\api.yaml = src\api\api-spec\api.yaml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -70,6 +75,7 @@ Global
 		{96C80A35-8FAD-4BE1-8B0C-7058B956C45C} = {52644260-F825-49BE-9CE3-3818182A321F}
 		{35695224-4C9B-472A-BC9F-AE35428C2E53} = {59DA2EA7-40E1-4F3D-A4C1-D989619BE0DC}
 		{DEF5305B-4E52-4018-8FA6-C107816E602F} = {35695224-4C9B-472A-BC9F-AE35428C2E53}
+		{32302B1D-1C24-413D-B6AB-8D031C522C52} = {59DA2EA7-40E1-4F3D-A4C1-D989619BE0DC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A5958238-CD80-45F2-8C8C-7DFAACC9E1F7}

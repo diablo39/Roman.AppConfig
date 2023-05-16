@@ -1,3 +1,4 @@
+using Roman.AppConfig.Infrastructure;
 
 namespace Roman.AppConfig.Api
 {
@@ -13,6 +14,9 @@ namespace Roman.AppConfig.Api
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddCompression();
+            builder.Services.RegisterCommandsAndQueries();
+            builder.Services.RegisterInfrastructureServices();
 
             var app = builder.Build();
 
@@ -26,7 +30,6 @@ namespace Roman.AppConfig.Api
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 

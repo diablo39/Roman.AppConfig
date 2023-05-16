@@ -32,9 +32,9 @@ namespace Roman.AppConfig.Api
                                 .AddClasses(classes => classes.AssignableTo(typeof(IValidator<>))).AsImplementedInterfaces().WithTransientLifetime()
                             );
 
-            services.Decorate(typeof(ICommandHandler<,>), typeof(OperationTypeCommandHandlerDecorator<,>));
-            services.Decorate(typeof(ICommandHandler<,>), typeof(ValidationCommandHandlerDecorator<,>));
-            services.Decorate(typeof(ICommandHandler<,>), typeof(CatchExceptionsCommandHandlerDecorator<,>));
+            //services.Decorate(typeof(ICommandHandler<,>), typeof(OperationTypeCommandHandlerDecorator<,>));
+            //services.Decorate(typeof(ICommandHandler<,>), typeof(ValidationCommandHandlerDecorator<,>));
+            //services.Decorate(typeof(ICommandHandler<,>), typeof(CatchExceptionsCommandHandlerDecorator<,>));
 
             services.Decorate(typeof(IQueryHandler<,>), typeof(OperationTypeQueryHandlerDecorator<,>));
             services.Decorate(typeof(IQueryHandler<,>), typeof(CatchExceptionsQueryHandlerDecorator<,>));
