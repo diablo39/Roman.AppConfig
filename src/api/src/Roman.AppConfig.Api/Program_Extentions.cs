@@ -8,8 +8,15 @@ using System.IO.Compression;
 
 namespace Roman.AppConfig.Api
 {
+    /// <summary>
+    /// Extentions used in Program.cs
+    /// </summary>
     public static class ProgramExtensions
     {
+        /// <summary>
+        /// Add compression to response
+        /// </summary>
+        /// <param name="services"></param>
         public static void AddCompression(this IServiceCollection services)
         {
             services.AddResponseCompression(e => { e.EnableForHttps = true; });
@@ -23,6 +30,10 @@ namespace Roman.AppConfig.Api
             });
         }
 
+        /// <summary>
+        /// Register commands and queries
+        /// </summary>
+        /// <param name="services"></param>
         public static void RegisterCommandsAndQueries(this IServiceCollection services)
         {
             services.Scan(scan => scan

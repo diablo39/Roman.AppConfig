@@ -14,14 +14,20 @@ using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace Roman.AppConfig.Api
 {
+    /// <summary>
+    /// Main program class.
+    /// </summary>
     public class Program
     {
+        /// <summary>
+        /// Main method.
+        /// </summary>
+        /// <param name="args">Command line parameters</param>
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            //builder.Services.AddControllers();
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -108,7 +114,7 @@ namespace Roman.AppConfig.Api
                 c.OAuthClientId(clientId);
                 var scopes = builder.Configuration["Authentication:Scope"]?.Split(" ");
                 c.OAuthScopes(scopes);
-                var audience = builder.Configuration["Authentication:Audience"];
+                var audience = builder.Configuration["Authentication:Audience"] ?? throw new Exception("Authentication:Audience configuration key is absent");
                 c.OAuthAdditionalQueryStringParams(new Dictionary<string, string> { { "audience", audience } });
             });
 

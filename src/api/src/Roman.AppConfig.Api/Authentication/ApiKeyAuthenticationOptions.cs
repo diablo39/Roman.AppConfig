@@ -2,10 +2,7 @@
 
 namespace Roman.AppConfig.Api.Authentication
 {
-    /// <summary>
-    ///
-    /// </summary>
-    public class ApiKeyAuthenticationOptions : AuthenticationSchemeOptions
+    internal class ApiKeyAuthenticationOptions : AuthenticationSchemeOptions
     {
     }
 }

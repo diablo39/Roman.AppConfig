@@ -6,7 +6,7 @@ using System.Reflection;
 
 namespace Roman.AppConfig.Api.Swagger
 {
-    public class ConfigureSwaggerGenOptions : IConfigureOptions<SwaggerGenOptions>
+    internal class ConfigureSwaggerGenOptions : IConfigureOptions<SwaggerGenOptions>
     {
         private readonly IConfiguration _configuration;
 

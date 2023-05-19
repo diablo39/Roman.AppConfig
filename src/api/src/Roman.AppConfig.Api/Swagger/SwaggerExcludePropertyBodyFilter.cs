@@ -3,7 +3,7 @@ using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace Roman.AppConfig.Api.Swagger
 {
-    public class SwaggerExcludePropertyBodyFilter : IRequestBodyFilter
+    internal class SwaggerExcludePropertyBodyFilter : IRequestBodyFilter
     {
         public void Apply(OpenApiRequestBody requestBody, RequestBodyFilterContext context)
         {

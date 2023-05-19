@@ -5,10 +5,22 @@ using Roman.CQRS.Abstraction.Query;
 
 namespace Roman.AppConfig.Api.Controllers
 {
+    /// <summary>
+    /// Applications controller.
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class ApplicationsController : ControllerBase
     {
+        /// <summary>
+        /// Get list of applications.
+        /// </summary>
+        /// <param name="handler"></param>
+        /// <param name="sortBy"></param>
+        /// <param name="sortDesc"></param>
+        /// <param name="page"></param>
+        /// <param name="itemsPerPage"></param>
+        /// <returns></returns>
         // GET: applications
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -32,6 +44,11 @@ namespace Roman.AppConfig.Api.Controllers
             return result;
         }
 
+        /// <summary>
+        /// Get application by id.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         // GET: applications/{id:guid}
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]

@@ -3,7 +3,7 @@ using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace Roman.AppConfig.Api.Swagger
 {
-    public class AddDefaultResponseFilter<T> : IOperationFilter
+    internal class AddDefaultResponseFilter<T> : IOperationFilter
             where T : class
     {
         public void Apply(OpenApiOperation operation, OperationFilterContext context)
